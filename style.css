@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Nutmeg:#854632;
+    --Dark-Raspberry:#7b284f;
+    --Dark-Raspberry-bg:#7B284F77;
+    --White:#ffffff;
+    --Rose-White:#fff5fa;
+    --Eggshell:#f3e6d8;
+    --Light-Grey:#e4ded8;
+    --Wenge-Brown:#5f574e;
+    --Dark-Charcoal:#302d2c;
+    --Font-Principal: "Young Serif", serif;
+    --Font-Secundaria: "Outfit", sans-serif;
+}
+
+body{
+    background-color: var(--Eggshell);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: var(--Wenge-Brown);
+}
+.container{
+    max-width: 800px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--White);
+    padding: 30px;
+    margin: 40px 0;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+/* BANNER SECTION STYLES */
+
+.header__banner{
+    display: flex;
+    flex-direction: column;
+}
+
+.header__banner img{
+    width: 100%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    height: 350px;
+}
+
+.header__banner h1{
+    font-family: var(--Font-Principal);
+    font-weight: 400;
+    font-size: 2em;
+    margin: 30px 0;
+}
+
+.header__banner p{
+    font-family: var(--Font-Secundaria);
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+/* PREPARATION SECTION */
+
+.preparation__time{
+    background-color: var(--Rose-White);
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+.preparation__time h3{
+    margin: 20px;
+    margin-bottom: 0;
+    color: var(--Dark-Raspberry);
+    font-family: var(--Font-Secundaria);
+    font-weight: 700;
+}
+
+.preparation__time-list{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    margin: 10px;
+    margin-top: 0;
+    list-style: none;
+}
+
+.preparation__time-list .preparation__time-item::before {
+    content: '\2022';
+    color: var(--Dark-Raspberry); 
+    display: inline-block; 
+    font-size: 1.3em;
+    margin-right: 1em; 
+}
+
+.preparation__time-item{
+    padding: 5px;
+    font-family: var(--Font-Secundaria);
+}
+
+.preparation__time-span{
+    font-family: var(--Font-Secundaria);
+    font-weight: 600;
+    color: var(--Dark-Charcoal);
+}
+
+/* INGREDIENTS SECTION  */
+
+.ingredientes h2{
+    color: var(--Nutmeg);
+    font-family: var(--Font-Principal);
+    font-weight: 400;
+    margin: 15px 0;
+}
+
+.ingredientes__list{
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    list-style: none;
+    margin-left: 25px;
+}
+
+.ingredientes__item{
+    font-family: var(--Font-Secundaria);
+    padding: 5px;
+    margin-left: -20px;
+}
+
+.ingredientes__list .ingredientes__item::before {
+    content: '\2022';
+    color: var(--Nutmeg); 
+    display: inline-block; 
+    font-size: 1.3em;
+    margin-right: 0.8em; 
+}
+
+/* DIVISOR SECTION */
+
+.divisor{
+    border: 1px solid var(--Light-Grey);
+}
+
+
+/*  INSTRUCCIONS SECTION */
+
+.intructions h2{
+    color: var(--Nutmeg);
+    font-family: var(--Font-Principal);
+    font-weight: 400;
+    margin: 15px 0;
+}
+
+.intructions__list{
+    list-style: none;
+    counter-reset: li;
+    margin-bottom: 25px;
+}
+
+.intructions__item{
+    font-family: var(--Font-Secundaria);
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 10px; ;
+    margin-bottom: 5px;
+}
+
+.intructions__list .intructions__item::before{
+    content: counter(li) "."; 
+    color: var(--Nutmeg); 
+    font-size: 1em; 
+    display: inline-block; 
+    width: 1.5em; 
+    counter-increment: li;
+    font-family: var(--Font-Secundaria);
+    font-weight: 700;
+}
+
+.intructions__item span{
+    font-family: var(--Font-Secundaria);
+    font-weight: 600;
+    color: var(--Dark-Charcoal);
+}
+
+/* NUTRITION SECTION  */
+
+.nutrition h2{
+    color: var(--Nutmeg);
+    font-family: var(--Font-Principal);
+    font-weight: 400;
+    margin: 15px 0;
+}
+
+.nutrition p{
+    margin-bottom: 10px;
+    font-family: var(--Font-Secundaria);
+    font-weight: 400;
+}
+
+.nutrition__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.nutrition__container-div{
+    font-family: var(--Font-Secundaria);
+    font-weight: 400;
+    margin: 12px;
+}
+
+.div-heigth{
+    color: var(--Nutmeg);
+    font-weight: 700;
+}
+
+/* MOBILE DESIGN */
+
+@media screen and (max-width:767px){
+    body{
+        background-color: none;
+    }
+
+    .container{
+        width:100%;
+        margin: 0 auto; 
+        border-radius: 0;
+        position: relative;
+}
+
+    .header__banner img{
+        width: 100%;
+        height: auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        border-radius: 0;
+}
+
+    .header__banner h1{
+        margin-top: 180px;
+    }
+
+}
